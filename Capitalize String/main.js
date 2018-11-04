@@ -1,18 +1,13 @@
-let lower = 'hello world hi';
+let string = 'you should probably capitalize me';
 
-
-const array = (string) =>{
-  return string.split(' ')
-}
-const cap = (str) => {
-  let arr = str.split(' ');
+const caps = (str) => {
+  let split = str.split(' ');
   let newArr = []
-  arr.forEach(function(e){
-    e = e.charAt(0).toUpperCase() + e.slice(1);
-    newArr.push(e);
+	split.forEach(function(i){
+    newArr.push(i.charAt(0).toUpperCase() + i.slice(1)) 
   })
-  return newArr.join(' ')
+	let capstring = newArr.join(' ')
+  console.log(capstring)
 }
 
-
-console.log(cap(lower))
+console.log(caps(string));
